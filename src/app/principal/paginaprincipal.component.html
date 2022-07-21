@@ -1,0 +1,22 @@
+<div class="container">   
+
+    <div class="image-container"></div>
+ 
+    <div class="cards">
+        <div class="head">
+    <mat-label>BUSCAR CEP: </mat-label>
+    <input type="text" matInput placeholder="Digte o CEP" #retorno (keyup.enter)="buscarCep(retorno.value)">
+    <button mat-mini-fab (click)="buscarCep(retorno.value)"><mat-icon>arrow_right_alt</mat-icon></button>
+         </div>  
+
+<mat-card>
+    <mat-card-content>
+        <input type="text" matInput placeholder="CEP" disabled value={{cep.cep}}>
+        <input type="text" matInput placeholder="LOGRADOURO" disabled value={{cep.logradouro}}>
+        <input type="text" matInput placeholder="BAIRRO" disabled value={{cep.bairro}}>
+        <input type="text" matInput placeholder="LOCALIDADE" disabled value={{cep.localidade}}>
+        <input type="text" matInput placeholder="UF" disabled value={{cep.uf}}>  
+    </mat-card-content>
+</mat-card>
+</div>
+</div>
